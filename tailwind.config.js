@@ -5,4 +5,11 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  extend: {
+    fontFamily: {
+      openSans: ["Open Sans", "sans-serif"],
+      lora: ["Lora", "serif"],
+      unna: ["Unna", "serif"],
+    },
+  },
 };
