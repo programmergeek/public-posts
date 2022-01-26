@@ -34,3 +34,16 @@ export const SecondaryButton: React.FC<
     </button>
   );
 };
+
+export const IconButton: React.FC<
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >
+> = ({ ...props }) => {
+  return (
+    <button className="w-12 rounded-full px-2 py-2 bg-white">
+      {props.children}
+    </button>
+  );
+};

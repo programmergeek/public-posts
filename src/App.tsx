@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.css";
-import { PrimaryButton, SecondaryButton } from "./Components";
-
+import { IconButton, PrimaryButton, SecondaryButton } from "./Components";
+import { Home } from "@styled-icons/entypo/Home";
 function App() {
   return (
     <div className="App">
       <PrimaryButton>Read</PrimaryButton>
       <SecondaryButton>Sparta</SecondaryButton>
+      <IconButton>
+        <Home />
+      </IconButton>
     </div>
   );
 }
