@@ -18,3 +18,19 @@ export const PrimaryButton: React.FC<
     </button>
   );
 };
+
+export const SecondaryButton: React.FC<
+  React.DetailedHTMLProps<
+    React.ButtonHTMLAttributes<HTMLButtonElement>,
+    HTMLButtonElement
+  >
+> = ({ ...props }) => {
+  return (
+    <button
+      className="bg-white rounded-full border-4 border-black font-unna px-9 py-1 text-lg"
+      {...props}
+    >
+      {props.children}
+    </button>
+  );
+};
