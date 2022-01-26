@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import { PrimaryButton } from "./Components";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-3xl font-lora underline">Test</h1>
+      <PrimaryButton>Read</PrimaryButton>
     </div>
   );
 }
