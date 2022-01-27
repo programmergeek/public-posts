@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 export const PrimaryButton: React.FC<
   React.DetailedHTMLProps<
@@ -41,14 +41,29 @@ export const IconButton: React.FC<
     HTMLButtonElement
   >
 > = ({ ...props }) => {
+  const [labelIsVisible, updateLabelIsVisible] = useState(false);
+
   return (
-    <button className="w-12 rounded-full px-2 py-2 bg-white" {...props}>
-      {props.children}
-    </button>
+    <div className="relative w-fit">
+      <button
+        className="w-12 rounded-full px-2 py-2 bg-white"
+        {...props}
+        onMouseOver={() => updateLabelIsVisible(true)}
+        onMouseLeave={() => updateLabelIsVisible(false)}
+      >
+        {props.children}
+      </button>
+      <div
+        className="absolute top-2 left-16 w-fit"
+        style={{ display: labelIsVisible ? "block" : "none" }}
+      >
+        <IconButtonLabel text="Home" />
+      </div>
+    </div>
   );
 };
 
-export const IconButtonLabel: React.FC<{ text: string }> = ({ ...props }) => {
+const IconButtonLabel: React.FC<{ text: string }> = ({ ...props }) => {
   return (
     <div className="flex relative">
       <div className="w-3 absolute top-2 overflow-hidden inline-block">

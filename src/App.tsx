@@ -1,11 +1,6 @@
 import React from "react";
 import "./App.css";
-import {
-  IconButton,
-  IconButtonLabel,
-  PrimaryButton,
-  SecondaryButton,
-} from "./Components";
+import { IconButton, PrimaryButton, SecondaryButton } from "./Components";
 import { Home } from "@styled-icons/entypo/Home";
 function App() {
   return (
@@ -15,7 +10,6 @@ function App() {
       <IconButton>
         <Home />
       </IconButton>
-      <IconButtonLabel text="Sparta" />
     </div>
   );
 }
