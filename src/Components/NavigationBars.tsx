@@ -1,5 +1,7 @@
 import React from "react";
 import { IconButton } from ".";
+import { Home } from "@styled-icons/entypo/Home";
+import { AddSquareMultiple } from "@styled-icons/fluentui-system-filled/AddSquareMultiple";
 
 type navBarProps = {
   iconsAndLabels: {
@@ -22,10 +24,21 @@ const NavBar: React.FC<navBarProps> = ({ ...props }) => {
   );
 };
 
-export const MiniNavBar: React.FC<navBarProps> = ({ ...props }) => {
+export const MiniNavBar: React.FC = () => {
   return (
     <div>
-      <NavBar iconsAndLabels={props.iconsAndLabels} />
+      <NavBar iconsAndLabels={miniNavBarIconsAndLabels} />
     </div>
   );
 };
+
+const miniNavBarIconsAndLabels = [
+  {
+    icon: <Home />,
+    label: "Home",
+  },
+  {
+    icon: <AddSquareMultiple />,
+    label: "Create",
+  },
+];
