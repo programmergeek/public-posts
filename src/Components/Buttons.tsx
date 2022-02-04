@@ -39,7 +39,7 @@ export const IconButton: React.FC<
   React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
-  >
+  > & { label: string }
 > = ({ ...props }) => {
   const [labelIsVisible, updateLabelIsVisible] = useState(false);
 
@@ -57,7 +57,7 @@ export const IconButton: React.FC<
         className="absolute top-2 left-16 w-fit"
         style={{ display: labelIsVisible ? "block" : "none" }}
       >
-        <IconButtonLabel text="Home" />
+        <IconButtonLabel text={props.label} />
       </div>
     </div>
   );
