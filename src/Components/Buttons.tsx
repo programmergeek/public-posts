@@ -81,7 +81,7 @@ export const LabeledIconButton: React.FC<{ label: string }> = ({
 const IconButtonLabel: React.FC<{ text: string }> = ({ ...props }) => {
   return (
     <div className="flex relative">
-      <div className="w-3 absolute top-2 overflow-hidden inline-block">
+      <div className="w-2 absolute top-2.5 left-1 overflow-hidden inline-block">
         <div className=" h-5 bg-neutral-900 opacity-90 -rotate-45 transform origin-top-right"></div>
       </div>
       <div className="absolute left-3 bg-neutral-900 h-8 text-white rounded-md px-6 py-1 m-0 w-fit font-openSans opacity-90">
