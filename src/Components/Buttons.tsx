@@ -71,7 +71,9 @@ export const LabeledIconButton: React.FC<{ label: string }> = ({
       <button className="w-8 h-8 rounded-full">
         <div className="w-6 ml-1 mb-1">{props.children}</div>
       </button>
-      <label className="font-unna text-sm text-white"> {props.label} </label>
+      <label className="font-unna text-sm text-white w-fit">
+        {props.label}
+      </label>
     </div>
   );
 };
