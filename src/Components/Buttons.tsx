@@ -63,6 +63,19 @@ export const IconButton: React.FC<
   );
 };
 
+export const LabeledIconButton: React.FC<{ label: string }> = ({
+  ...props
+}) => {
+  return (
+    <div className="flex flex-col">
+      <button className="w-8 h-8 rounded-full">
+        <div className="w-6 ml-1 mb-1">{props.children}</div>
+      </button>
+      <label className="font-unna text-sm text-white"> {props.label} </label>
+    </div>
+  );
+};
+
 const IconButtonLabel: React.FC<{ text: string }> = ({ ...props }) => {
   return (
     <div className="flex relative">
