@@ -28,9 +28,9 @@ const NavBar: React.FC<navBarProps> = ({ ...props }) => {
 
 const NavBarMobile: React.FC<navBarProps> = ({ ...props }) => {
   return (
-    <div className="flex justify-center h-16 min-w-[200px] rounded-full px-8 bg-black w-fit">
+    <div className="flex justify-center h-16 min-w-[200px] rounded-full px-8 bg-black w-fit absolute bottom-4 left-1/2 -translate-x-1/2">
       {props.iconsAndLabels.map((item) => (
-        <div key={item.label} className="mx-3">
+        <div key={item.label} className="mx-4 mt-1.5">
           <LabeledIconButton label={item.label}>{item.icon}</LabeledIconButton>
         </div>
       ))}
