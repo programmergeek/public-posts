@@ -1,5 +1,5 @@
 import React from "react";
-import { IconButton } from ".";
+import { IconButton, LabeledIconButton } from ".";
 import { Home } from "@styled-icons/entypo/Home";
 import { AddSquareMultiple } from "@styled-icons/fluentui-system-filled/AddSquareMultiple";
 import { Edit } from "@styled-icons/fluentui-system-regular/Edit";
@@ -22,6 +22,18 @@ const NavBar: React.FC<navBarProps> = ({ ...props }) => {
           </div>
         );
       })}
+    </div>
+  );
+};
+
+const NavBarMobile: React.FC<navBarProps> = ({ ...props }) => {
+  return (
+    <div className="flex justify-center h-16 min-w-[200px] rounded-full px-8 bg-black">
+      {props.iconsAndLabels.map((item) => (
+        <div key={item.label} className="mx-3">
+          <LabeledIconButton label={item.label}>{item.icon}</LabeledIconButton>
+        </div>
+      ))}
     </div>
   );
 };
