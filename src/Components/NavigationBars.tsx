@@ -62,6 +62,14 @@ export const MiniNavBarMobile: React.FC = () => {
   );
 };
 
+export const FullNavBarMobile: React.FC = () => {
+  return (
+    <div>
+      <NavBarMobile iconsAndLabels={fullNavBarIconsAndLabels} />
+    </div>
+  );
+};
+
 const miniNavBarIconsAndLabels = [
   {
     icon: <Home />,
