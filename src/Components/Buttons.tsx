@@ -68,8 +68,8 @@ export const LabeledIconButton: React.FC<{ label: string }> = ({
 }) => {
   return (
     <div className="flex flex-col">
-      <button className="w-8 h-8 rounded-full">
-        <div className="w-6 ml-1 mb-1">{props.children}</div>
+      <button className="w-9 h-9 rounded-full bg-white">
+        <div className="w-7 ml-1">{props.children}</div>
       </button>
       <label className="font-unna text-sm text-white w-fit">
         {props.label}
