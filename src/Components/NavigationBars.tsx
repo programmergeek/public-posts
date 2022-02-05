@@ -2,6 +2,8 @@ import React from "react";
 import { IconButton } from ".";
 import { Home } from "@styled-icons/entypo/Home";
 import { AddSquareMultiple } from "@styled-icons/fluentui-system-filled/AddSquareMultiple";
+import { Edit } from "@styled-icons/fluentui-system-regular/Edit";
+import { Trash } from "@styled-icons/boxicons-regular/Trash";
 
 type navBarProps = {
   iconsAndLabels: {
@@ -32,6 +34,14 @@ export const MiniNavBar: React.FC = () => {
   );
 };
 
+export const FullNavBar: React.FC = () => {
+  return (
+    <div>
+      <NavBar iconsAndLabels={fullNavBarIconsAndLabels} />
+    </div>
+  );
+};
+
 const miniNavBarIconsAndLabels = [
   {
     icon: <Home />,
@@ -40,5 +50,24 @@ const miniNavBarIconsAndLabels = [
   {
     icon: <AddSquareMultiple />,
     label: "Create",
+  },
+];
+
+const fullNavBarIconsAndLabels = [
+  {
+    icon: <Home />,
+    label: "Home",
+  },
+  {
+    icon: <AddSquareMultiple />,
+    label: "Create",
+  },
+  {
+    icon: <Edit />,
+    label: "Edit",
+  },
+  {
+    icon: <Trash />,
+    label: "Delete",
   },
 ];

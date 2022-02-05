@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
-import { MiniNavBar } from "./Components";
+import { FullNavBar, MiniNavBar } from "./Components";
 function App() {
   return (
     <div className="App">
       <MiniNavBar />
+      <FullNavBar />
     </div>
   );
 }
