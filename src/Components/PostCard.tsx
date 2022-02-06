@@ -3,7 +3,7 @@ import { PrimaryButton } from "./Buttons";
 
 export const PostCard: React.FC = () => {
   return (
-    <div>
+    <div className="border-b-2 border-neutral-400 px-2 py-4">
       <section className="mb-1">
         <Title>Title</Title>
       </section>
@@ -11,7 +11,7 @@ export const PostCard: React.FC = () => {
         <AuthorAndPublishDate author="Will Joseph" date="22 January 2022" />
       </section>
       <section className="mb-8">
-        <p className="font-openSans">
+        <p className="font-openSans text-sm">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
           reiciendis obcaecati ut esse odit. Deserunt beatae libero laudantium
           incidunt iure facilis provident, voluptatem tempore perspiciatis
