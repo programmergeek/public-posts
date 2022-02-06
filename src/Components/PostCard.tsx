@@ -1,22 +1,24 @@
 import React from "react";
 import { PrimaryButton } from "./Buttons";
 
-export const PostCard: React.FC = () => {
+type PostCardProps = {
+  title: string;
+  publishDate: string;
+  author: string;
+  postSnippet: string;
+};
+
+export const PostCard: React.FC<PostCardProps> = ({ ...props }) => {
   return (
     <div className="border-b-2 border-neutral-400 px-2 py-4 sm:border-0 sm:p-5 sm:w-80 sm:h-80 sm:rounded-lg bg-white lg:w-96 lg:h-72">
       <section className="mb-1">
-        <Title>Title</Title>
+        <Title>{props.title}</Title>
       </section>
       <section className="mb-4">
-        <AuthorAndPublishDate author="Will Joseph" date="22 January 2022" />
+        <AuthorAndPublishDate author={props.author} date={props.publishDate} />
       </section>
       <section className="mb-8 sm:mb-4">
-        <p className="font-openSans text-sm">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
-          reiciendis obcaecati ut esse odit. Deserunt beatae libero laudantium
-          incidunt iure facilis provident, voluptatem tempore perspiciatis
-          debitis...
-        </p>
+        <p className="font-openSans text-sm">{props.postSnippet}</p>
       </section>
       <div className="flex justify-end">
         <PrimaryButton>Read</PrimaryButton>
