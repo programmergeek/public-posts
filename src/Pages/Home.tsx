@@ -7,8 +7,8 @@ export const Home = () => {
       <section className="hidden lg:flex sm:w-24 sm:h-screen ml-1">
         <MiniNavBar />
       </section>
-      <div className="w-[87vw] mt-7 h-11/12">
-        <div className="grid lg:grid-cols-3 2xl:grid-cols-4 gap-10 content-start h-fit place-items-center">
+      <div className="w-screen lg:w-[87vw] sm:mt-7 h-11/12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 md:gap-5 md:p-6 lg:gap-10 content-start h-fit place-items-center">
           {data.map((data, key) => (
             <div key={key} className="">
               <PostCard
