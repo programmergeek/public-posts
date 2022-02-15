@@ -10,7 +10,7 @@ type PostCardProps = {
 
 export const PostCard: React.FC<PostCardProps> = ({ ...props }) => {
   return (
-    <div className="border-b-2 border-neutral-400 px-2 py-4 sm:border-0 sm:p-5 sm:w-80 sm:h-80 sm:rounded-lg bg-white lg:w-96 lg:h-72">
+    <div className="border-b-2 border-neutral-400 px-2 py-4 sm:border-0 sm:p-5 sm:w-80 sm:h-80 sm:rounded-lg bg-white 2xl:w-[20vw] lg:h-72 lg:w-[29vw] md: w-[25vw] xl:w-[28vw]">
       <section className="mb-1">
         <Title>{props.title}</Title>
       </section>
@@ -35,7 +35,7 @@ const AuthorAndPublishDate: React.FC<{ author: string; date: string }> = ({
   ...props
 }) => {
   return (
-    <p className="font-openSans text-neutral-500">
+    <p className="font-openSans text-neutral-500 text-sm">
       {props.author} • {props.date}
     </p>
   );

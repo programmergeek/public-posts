@@ -4,7 +4,7 @@ import { MiniNavBar, PostCard } from "../Components";
 export const Home = () => {
   return (
     <div className="flex">
-      <section className="hidden sm:flex sm:w-44 sm:h-screen ml-1">
+      <section className="hidden lg:flex sm:w-24 sm:h-screen ml-1">
         <MiniNavBar />
       </section>
       <div className="w-[87vw] mt-7 h-11/12">
