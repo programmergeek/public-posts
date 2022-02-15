@@ -14,10 +14,10 @@ type navBarProps = {
 
 const NavBar: React.FC<navBarProps> = ({ ...props }) => {
   return (
-    <div className="flex flex-col justify-center bg-black rounded-full w-16 min-h-[200px] py-8">
+    <div className="flex flex-col justify-center bg-black rounded-full w-16 min-h-[200px] py-8 absolute top-1/2 -translate-y-1/2">
       {props.iconsAndLabels.map((item) => {
         return (
-          <div key={item.label} className="mb-3 ml-1.5 mt-3">
+          <div key={item.label} className="mb-3 ml-2 mt-3">
             <IconButton label={item.label}>{item.icon}</IconButton>
           </div>
         );
