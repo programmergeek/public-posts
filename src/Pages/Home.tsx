@@ -8,7 +8,7 @@ export const Home = () => {
         <MiniNavBar />
       </section>
       <div className="w-screen lg:w-[87vw] sm:mt-7 h-11/12">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 md:gap-5 md:p-6 lg:gap-10 content-start h-fit place-items-center">
+        <div className="grid sm:grid-cols-2 sm:gap-y-5 lg:grid-cols-3 2xl:grid-cols-4 md:gap-x-2 md:gap-y-5 md:p-6 lg:gap-x-14 lg:gap-y-5 content-start h-fit place-items-center">
           {data.map((data, key) => (
             <div key={key} className="">
               <PostCard
