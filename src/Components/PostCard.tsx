@@ -10,7 +10,7 @@ type PostCardProps = {
 
 export const PostCard: React.FC<PostCardProps> = ({ ...props }) => {
   return (
-    <div className="border-b-2 border-neutral-400 px-2 py-4 sm:border-0 sm:p-5 sm:w-80 sm:h-80 sm:rounded-lg bg-white 2xl:w-[20vw] md:h-72 lg:w-[28vw] md:w-[45vw] xl:w-[28vw]">
+    <div className="border-b-2 border-neutral-400 px-2 py-4 sm:border-0 sm:p-5 sm:w-[47vw] sm:h-80 sm:rounded-lg bg-white 2xl:w-[20vw] md:h-72 lg:w-[28vw] md:w-[45vw] xl:w-[28vw]">
       <section className="mb-1">
         <Title>{props.title}</Title>
       </section>
