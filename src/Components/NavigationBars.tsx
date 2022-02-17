@@ -14,7 +14,7 @@ type navBarProps = {
 
 const NavBar: React.FC<navBarProps> = ({ ...props }) => {
   return (
-    <div className="flex flex-col justify-center bg-black rounded-full w-16 min-h-[200px] py-8 absolute top-1/2 -translate-y-1/2">
+    <div className="flex flex-col justify-center bg-black rounded-full w-16 min-h-[200px] py-8 fixed top-1/2 -translate-y-1/2">
       {props.iconsAndLabels.map((item) => {
         return (
           <div key={item.label} className="mb-3 ml-2 mt-3">
@@ -28,7 +28,7 @@ const NavBar: React.FC<navBarProps> = ({ ...props }) => {
 
 const NavBarMobile: React.FC<navBarProps> = ({ ...props }) => {
   return (
-    <div className="flex justify-center h-16 min-w-[200px] rounded-full px-8 bg-black w-fit absolute bottom-4 left-1/2 -translate-x-1/2">
+    <div className="flex justify-center h-16 min-w-[200px] rounded-full px-8 bg-black w-fit fixed bottom-4 left-1/2 -translate-x-1/2">
       {props.iconsAndLabels.map((item) => (
         <div key={item.label} className="mx-4 mt-1.5">
           <LabeledIconButton label={item.label}>{item.icon}</LabeledIconButton>
