@@ -3,8 +3,8 @@ import { PostContent } from "../Components";
 
 export const Posts: React.FC = () => {
   return (
-    <div className="flex justify-center">
-      <div className="pt-5 w-2/5">
+    <div className="">
+      <div className="absolute left-1/2 -translate-x-1/2 pt-5">
         <h1 className="font-unna text-7xl mb-4"> {dummyData.title} </h1>
         <p className="text-neutral-400 font-openSans">
           {dummyData.author} • {dummyData.publishDate}
