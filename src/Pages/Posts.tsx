@@ -1,13 +1,15 @@
 import React from "react";
+import { PostContent } from "../Components";
 
 export const Posts: React.FC = () => {
   return (
     <div className="flex justify-center">
       <div className="pt-5 w-2/5">
-        <h1 className="font-lora text-6xl mb-4"> {dummyData.title} </h1>
+        <h1 className="font-unna text-7xl mb-4"> {dummyData.title} </h1>
         <p className="text-neutral-400 font-openSans">
           {dummyData.author} • {dummyData.publishDate}
         </p>
+        <PostContent>{dummyData.content}</PostContent>
       </div>
     </div>
   );

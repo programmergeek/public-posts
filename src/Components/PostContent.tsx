@@ -1,8 +1,17 @@
 import React from "react";
 
 /** Returns array of paragraph blocks.*/
-export const PostContent = ({ ...props }) => {
-  return [<p key={1}></p>];
+export const PostContent: React.FC = ({ ...props }) => {
+  const paragraphs = processText(props.children as string);
+  return (
+    <div className="grid grid-cols-1 gap-10 font-lora mt-6">
+      {paragraphs.map((paragraph, key) => (
+        <p key={key} className="text-lg">
+          {paragraph}
+        </p>
+      ))}
+    </div>
+  );
 };
 
 /** Separates text into paragraphs.
